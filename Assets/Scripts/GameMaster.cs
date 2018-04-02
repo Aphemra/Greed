@@ -11,4 +11,10 @@ public class GameMaster : MonoBehaviour
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 50;
     }
+
+    public void SetFormat(int formatIndex)
+    {
+        if (formatIndex >= 0 && formatIndex < 3)
+            GlobalFormatIndex = formatIndex;
+    }
 }

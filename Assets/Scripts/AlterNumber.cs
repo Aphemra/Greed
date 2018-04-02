@@ -7,6 +7,8 @@ public class AlterNumber : MonoBehaviour {
 
     public float numberToStartAt = 100.000f;
     public Text numberToDisplay;
+    public float toAddPerFrame = 1;
+    public bool isCurrency = false;
 
     public BigNumberFormatter bigNumberFormatter;
 
@@ -16,12 +18,12 @@ public class AlterNumber : MonoBehaviour {
     {
         number = numberToStartAt;
 
-        numberToDisplay.text = bigNumberFormatter.format(number);
+        numberToDisplay.text = bigNumberFormatter.Format(number, isCurrency);
 	}
 	
 	void Update () {
-        number++;
-        numberToDisplay.text = bigNumberFormatter.format(number);
+        number += toAddPerFrame;
+        numberToDisplay.text = bigNumberFormatter.Format(number, isCurrency);
     }
 
     public void add(float numberToIncreaseBy)
