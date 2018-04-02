@@ -11,7 +11,7 @@ public class BigNumberFormatter : MonoBehaviour {
 
     void Update()
     {
-        formatIndex = GameManager.GlobalFormatIndex;
+        formatIndex = GameMaster.GlobalFormatIndex;
     }
 
     public string format (double toConvert)
